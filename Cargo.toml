@@ -1,0 +1,28 @@
+[package]
+name = "mlvm"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+# The powerful command-line argument parser
+clap = { version = "4.4", features = ["derive"] }
+
+# The async runtime needed for our HTTP client
+tokio = { version = "1", features = ["full"] }
+
+# The most popular HTTP client library
+reqwest = { version = "0.11", features = ["json"] }
+
+# The serialization/deserialization framework
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Elegant error handling
+anyhow = "1.0"
+
+tar = "0.4"      # For handling .tar archives
+flate2 = "1.0"   # For handling Gzip decompression
+dirs = "5.0" # For cross-platform directory handling
+zip = "0.6" # For handling .zip archives
+zstd = "0.12"
+regex = "1.10.5"
