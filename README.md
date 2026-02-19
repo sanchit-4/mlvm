@@ -5,7 +5,7 @@
 
 If you find this project useful, please drop a ✨ star on the repo! It means a lot :)
 
-![Demo]()
+![Demo](https://github.com/user-attachments/assets/79176462-d41b-4423-b2e8-4128d3f7c6f8)
 
 ## Features
 
