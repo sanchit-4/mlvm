@@ -1,10 +1,10 @@
 // src/commands/bun.rs
 use anyhow::{bail, Context, Result};
-use serde::Deserialize;
 use std::fs;
 use std::env;
 use std::io::Cursor;
 use zip::ZipArchive;
+#[cfg(windows)]
 use std::os::windows::fs as windows_fs;
 
 pub async fn list_remote() -> Result<()> {

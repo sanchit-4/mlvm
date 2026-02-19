@@ -5,8 +5,11 @@ use flate2::read::GzDecoder; // For Gzip decompression
 use tar::Archive;           // For Tar archive handling
 use std::env; // <-- Import the `env` module to get OS info
 use zip::ZipArchive;
+#[cfg(windows)]
 use std::os::windows::fs as windows_fs;
-use std::io;
+
+#[cfg(windows)]
+use std::io; // This was only used in the Windows specific error handling
 
 // A struct that represents the fields we care about in the JSON response.
 // `serde` will automatically map the JSON keys to these struct fields.

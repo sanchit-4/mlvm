@@ -8,6 +8,7 @@ use flate2::read::GzDecoder;
 use tar::Archive;
 use zip::ZipArchive;
 use std::io::Cursor;
+#[cfg(windows)]
 use std::os::windows::fs as windows_fs;
 
 #[derive(Deserialize, Debug)]
