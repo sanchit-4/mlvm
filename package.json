@@ -1,0 +1,26 @@
+{
+  "name": "mlvm",
+  "version": "1.0.0",
+  "description": "**MLVM** is a blazing fast, cross-platform command line tool written in Rust that allows you to manage multiple versions of your favorite programming languages locally.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanchit-4/mlvm.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/sanchit-4/mlvm/issues"
+  },
+  "homepage": "https://github.com/sanchit-4/mlvm#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^20.4.2",
+    "@commitlint/config-conventional": "^20.4.2",
+    "husky": "^9.1.7"
+  }
+}

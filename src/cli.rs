@@ -19,6 +19,12 @@ pub enum Language {
         #[command(subcommand)]
         command: PythonCommand,
     },
+
+    Go { 
+        #[command(subcommand)]
+        command: GoCommand },
+
+    Bun { #[command(subcommand)] command: BunCommand },    
 // We can easily add Go { #[command(subcommand)] command: GoCommand } here later!
 }
 
@@ -47,4 +53,20 @@ pub enum PythonCommand {
         /// The version to install (e.g., "3.11.5")
         version: String,
     },
+    Use { version: String }, // Add this
+    List
+}
+
+#[derive(Subcommand, Debug)]
+pub enum GoCommand {
+    ListRemote,
+    Install { version: String },
+    Use { version: String },
+}
+
+#[derive(Subcommand, Debug)]
+pub enum BunCommand {
+    ListRemote,
+    Install { version: String },
+    Use { version: String },
 }

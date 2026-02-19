@@ -1,7 +1,6 @@
 use anyhow::{bail, Context, Result};
 use serde::Deserialize;
 use std::fs;
-use std::path::PathBuf;
 use flate2::read::GzDecoder; // For Gzip decompression
 use tar::Archive;           // For Tar archive handling
 use std::env; // <-- Import the `env` module to get OS info
@@ -194,6 +193,12 @@ pub fn use_version(version: &str) -> Result<()> {
         // For any other error, or on other platforms, just return it directly.
         return Err(e).context("Failed to create symlink");
     }
+    #[cfg(unix)]
+    let bin_path = current_symlink_path.join("bin");
+    #[cfg(windows)]
+    let bin_path = current_symlink_path;
+
+    println!("  Add this to your PATH: {}", bin_path.display());
     
     println!("Successfully switched to Node.js {}", version);
     println!("\nTo finish setup, you must add the 'current' directory to your PATH.");
