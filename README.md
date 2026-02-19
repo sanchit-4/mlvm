@@ -5,7 +5,7 @@
 
 If you find this project useful, please drop a ✨ star on the repo! It means a lot :)
 
-![Demo](https://github.com/user-attachments/assets/79176462-d41b-4423-b2e8-4128d3f7c6f8)
+https://github.com/user-attachments/assets/79176462-d41b-4423-b2e8-4128d3f7c6f8
 
 ## Features
 
@@ -29,7 +29,7 @@ Currently, `mlvm` supports the following languages (with more coming soon!):
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/shubhexists/mlvm.git
+   git clone https://github.com/sanchit-4/mlvm.git
    cd mlvm
    ```
 
